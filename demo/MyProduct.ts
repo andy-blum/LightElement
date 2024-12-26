@@ -16,15 +16,11 @@ export default class MyProduct extends LightElement {
     super.connectedCallback();
     const { productId } = this;
 
-    fetch(`https://fakestoreapi.com/products/${productId}`)
-    .then(response => {
-      if (response.ok) {
-        response.json()
-        .then(data => {
-          this.productDetails = data;
-        });
-      }
-    });
+    const response = await fetch(`https://fakestoreapi.com/products/${productId}`)
+
+    if (response.ok) {
+      this.productDetails = await response.json();
+    }
   }
 
   render() {
