@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=assistant:200,300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./MyProduct.ts"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+    <div class="intro">
+      <p>Sunt non minim officia proident commodo. Dolor magna irure consequat adipisicing laborum aliqua fugiat nisi laboris id enim. Sunt officia labore pariatur laborum excepteur eu Lorem cupidatat non ea voluptate. Adipisicing eiusmod cillum excepteur tempor cillum mollit. Cillum aliqua nostrud tempor irure irure commodo. Veniam adipisicing sunt mollit eu. Ex duis mollit laborum et cillum cillum exercitation dolor incididunt consequat ea consequat.</p>
+    <button>Call to action</button>
+    </div>
+    <ul class="product-grid">
+      <li>
+        <my-product product-id="1">
+          <p>Est in do commodo duis elit esse sunt.</p>
+        </my-product>
+      </li>
+      <li>
+        <my-product product-id="2">
+          <p>Est in do commodo duis elit esse sunt.</p>
+        </my-product>
+      </li>
+      <li>
+        <my-product product-id="3">
+          <p>Est in do commodo duis elit esse sunt.</p>
+        </my-product>
+      </li>
+      <li>
+        <my-product product-id="4">
+          <p>Est in do commodo duis elit esse sunt.</p>
+        </my-product>
+      </li>
+    </ul>
+    <script>
+      document.querySelectorAll('a, button')
+        .forEach(a => {
+          console.log(a);
+
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(e);
+          });
+        })
+    </script>
+  </body>
+</html>
